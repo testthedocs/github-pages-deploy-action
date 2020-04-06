@@ -28,6 +28,11 @@ if [ -z "$(git status --porcelain)" ]; then
     echo "Nothing to commit" && \
     exit 0
 fi && \
+if [[ "${PAGES_CNAME}" ]]
+then
+    echo "CNAME was set, writing CNAME file"
+    echo "${PAGES_CNAME}" > CNAME
+fi
 git add . && \
 git commit -m 'Deploy to GitHub Pages' && \
 git push --force $REMOTE_REPO master:$REMOTE_BRANCH && \

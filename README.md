@@ -68,6 +68,11 @@ The Docker container which powers the action runs Node which means `npm` command
 
 With the action correctly configured you should see the workflow trigger the deployment under the configured conditions.
 
+
+`PAGES_CNAME`: The CNAME to use for pages (Optional)
+
+This variable should contain the CNAME you want to run your pages under. The action will use this to generate the necessary `CNAME` file.
+
 ## Contributing
 
 We are a community effort, and everybody is most welcome to participate!
