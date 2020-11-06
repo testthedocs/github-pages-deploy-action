@@ -1,4 +1,4 @@
-FROM node:12.14-alpine3.11
+FROM node:12.19-alpine3.12
 
 LABEL "com.github.actions.name"="Deploy to GitHub Pages"
 LABEL "com.github.actions.description"="This action will handle the building and deploying process of your project to GitHub Pages."
